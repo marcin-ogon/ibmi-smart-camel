@@ -1,0 +1,62 @@
+<html>
+<head>
+    <title>Average CPU Rate</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="jumbotron">
+                    <h1 class="display-4">CPU rate</h1>
+                    <hr class="my-4">
+                    <canvas id="cpuChart"></canvas>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mermaid">{{headers.diagram}}</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        mermaid.initialize({startOnLoad:true});
+        var ctx = document.getElementById('cpuChart').getContext('2d');
+        var cpuData = {
+            labels: Array({{headers.size}}).fill(''),
+            datasets: [{
+                label: '{{headers.label}}',
+                data: Array({{headers.size}}).fill(0),
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1
+            }]
+        };
+        var cpuChart = new Chart(ctx, {
+            type: 'line',
+            data: cpuData,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: {{headers.size}}
+                    }
+                }
+            }
+        });
+
+        setInterval(function () {
+            $.get('{{headers.apiUrl}}', function (data) {
+                cpuData.labels.shift();
+                cpuData.labels.push('');
+                cpuData.datasets[0].data.shift();
+                cpuData.datasets[0].data.push(data);
+                cpuChart.update();
+            });
+        }, 1000);
+    </script>
+</body>
+</html>

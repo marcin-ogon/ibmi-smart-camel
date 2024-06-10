@@ -1,0 +1,53 @@
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+        <title>Main Website</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="text-center mt-5">Welcome to IBMi Smart Camel</h1>
+
+            <div class="row mt-5">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">CPU Monitor with SQL</h5>
+                            <p class="card-text">SQL query to fetch the average CPU rate from a system activity information table.</p>
+                            <a href="/camel/monitor" class="btn btn-primary">Go to site</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">CPU Monitor with DTAQ REQ/RSP</h5>
+                            <p class="card-text">Upon a request, it sets a constant message as the body, sends it to a specific data queue (DTAQ) on an IBM i system, and then enriches the message by polling another DTAQ. The received message is logged, unmarshalled using Bindy with a fixed format, logged again, and finally, a specific field 'unitUsed' from the message is set as the response body.</p>
+                            <a href="/camel/dtaq" class="btn btn-primary">Go to site</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Messsage handling with MSGQ</h5>
+                            <p class="card-text">It processes the exchange to set a message as the body, then sends it to a program (PGM) on an IBM i system via the JT400 component.</p>
+                            <a href="/camel/message" class="btn btn-primary">Go to site</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </body>
+</html>

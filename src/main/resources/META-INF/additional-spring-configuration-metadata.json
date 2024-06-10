@@ -1,0 +1,87 @@
+{"properties": [
+  {
+    "name": "ibmi.libraries",
+    "type": "java.lang.String",
+    "description": "A description for 'ibmi.libraries'"
+  },
+  {
+    "name": "ibmi.host",
+    "type": "java.lang.String",
+    "description": "A description for 'ibmi.host'"
+  },
+  {
+    "name": "api.secret",
+    "type": "java.lang.String",
+    "description": "A description for 'api.secret'"
+  },
+  {
+    "name": "api.setcolor",
+    "type": "java.lang.String",
+    "description": "A description for 'api.setColor'"
+  },
+  {
+    "name": "api.turnoff",
+    "type": "java.lang.String",
+    "description": "A description for 'api.tunOff'"
+  },
+  {
+    "name": "api.turnon",
+    "type": "java.lang.String",
+    "description": "A description for 'api.turnOn'"
+  },
+  {
+    "name": "dtaq.request.name",
+    "type": "java.lang.String",
+    "description": "A description for 'dtaq.request.name'"
+  },
+  {
+    "name": "dtaq.request.library",
+    "type": "java.lang.String",
+    "description": "A description for 'dtaq.request.library'"
+  },
+  {
+    "name": "dtaq.response.name",
+    "type": "java.lang.String",
+    "description": "A description for 'dtaq.response.name'"
+  },
+  {
+    "name": "dtaq.response.library",
+    "type": "java.lang.String",
+    "description": "A description for 'dtaq.response.library'"
+  },
+  {
+    "name": "msgq.name",
+    "type": "java.lang.String",
+    "description": "A description for 'msgq.name'"
+  },
+  {
+    "name": "msgq.library",
+    "type": "java.lang.String",
+    "description": "A description for 'msgq.library'"
+  },
+  {
+    "name": "msgq.pgm.name",
+    "type": "java.lang.String",
+    "description": "A description for 'msgq.pgm.name'"
+  },
+  {
+    "name": "msgq.pgm.library",
+    "type": "java.lang.String",
+    "description": "A description for 'msgq.pgm.library'"
+  },
+  {
+    "name": "env.username",
+    "type": "java.lang.String",
+    "description": "A description for 'env.username'"
+  },
+  {
+    "name": "env.password",
+    "type": "java.lang.String",
+    "description": "A description for 'env.password'"
+  },
+  {
+    "name": "env.library",
+    "type": "java.lang.String",
+    "description": "A description for 'env.library'"
+  }
+]}
